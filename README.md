@@ -1,1 +1,1 @@
-# WSI
+# Handwrite digits recognition
