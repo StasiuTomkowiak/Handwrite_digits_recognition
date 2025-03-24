@@ -34,7 +34,9 @@ To run this project, you need to have Python and TensorFlow installed. You can s
 
 ## Usage
 To train and evaluate the model, run the `main.py` script:
-python3 [main.py](http://_vscodecontentref_/1)
+```sh
+python3 main.py
+```
 
 The script will train the model on the MNIST dataset, save the trained model to handwrittenRecognition.keras, and evaluate the model on the test dataset.
 
