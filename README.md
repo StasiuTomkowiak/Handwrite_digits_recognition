@@ -22,12 +22,16 @@ To run this project, you need to have Python and TensorFlow installed. You can s
     cd Handwrite_digits_recognition
     ```
 
-2. Activate the virtual environment:
+2. Navigate to your desired virtual environments directory and create a new venv environment named tf with the following command:
+    ```sh
+    python3 -m venv tf 
+    ```
+3. Activate the virtual environment:
     ```sh
     source tf/bin/activate
     ```
 
-3. Install the required packages:
+4. Install the required packages:
     ```sh
     pip install -r requirements.txt
     ```
