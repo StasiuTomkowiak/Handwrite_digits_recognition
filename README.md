@@ -18,11 +18,11 @@ To run this project, you need to have Python and TensorFlow installed. You can s
 
 1. Clone the repository:
     ```sh
-    git clone <repository-url>
+    git clone git@github.com:StasiuTomkowiak/Handwrite_digits_recognition.git
     cd Handwrite_digits_recognition
     ```
 
-2. Navigate to your desired virtual environments directory and create a new venv environment named tf with the following command:
+2. Create a new venv environment named tf with the following command:
     ```sh
     python3 -m venv tf 
     ```

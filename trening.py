@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
 import random
+
 mnist = tf.keras.datasets.mnist
 
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
@@ -22,11 +23,7 @@ model.fit(x_train, y_train, epochs=30, batch_size=128)
 
 model.save('handwrittenRecognition.keras')
 
-model = tf.keras.models.load_model('handwrittenRecognition.keras')
-loss, accuracy = model.evaluate(x_test, y_test)
 
-print("Loss : ", loss)
-print("Accuracy : ", accuracy)
 
 
 
