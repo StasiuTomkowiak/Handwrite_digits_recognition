@@ -2,6 +2,7 @@ import tkinter as tk
 import numpy as np
 import tensorflow as tf
 import cv2
+import os
 from PIL import Image, ImageDraw
 
 model = tf.keras.models.load_model('handwrittenRecognition.keras')
@@ -19,6 +20,9 @@ class DigitRecognizerApp:
 
         self.btn_clear = tk.Button(root, text="Wyczyść", command=self.clear_canvas)
         self.btn_clear.pack()
+        self.btn_save = tk.Button(root, text="Zapisz jako JPG", command=self.save_canvas)
+        self.btn_save.pack()
+
 
         self.image = Image.new("L", (280, 280), 255)  
         self.draw = ImageDraw.Draw(self.image)
@@ -48,6 +52,14 @@ class DigitRecognizerApp:
         self.canvas.delete("all")
         self.image = Image.new("L", (280, 280), 255)
         self.draw = ImageDraw.Draw(self.image)
+    def save_canvas(self):
+        if not os.path.exists("digits"):
+            os.makedirs("digits")
+        img = self.image.resize((28, 28))  
+        file_path = os.path.join("digits", "digit.jpg") 
+        img.save(file_path, "JPEG")
+        print(f"Obraz zapisany jako {file_path}")
+
 
 root = tk.Tk()
 app = DigitRecognizerApp(root)
