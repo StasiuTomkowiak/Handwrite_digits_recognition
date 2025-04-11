@@ -8,7 +8,6 @@ This project is a handwritten digits recognition system using a neural network b
 - [Usage](#usage)
 - [Model Architecture](#model-architecture)
 - [Results](#results)
-- [License](#license)
 
 ## Introduction
 This project uses the MNIST dataset to train a neural network to recognize handwritten digits. The model is built using TensorFlow and Keras, and it achieves high accuracy on the test dataset.
@@ -48,12 +47,11 @@ The script will train the model on the MNIST dataset, save the trained model to 
 The neural network model consists of the following layers:
 
 * Flatten layer to convert the 28x28 images into a 1D array
-* Two Dense layers with 128 neurons each and ReLU activation
+* Conv2D layer with 32 filters, a 3x3 kernel size, and ReLU activation
+* MaxPooling2D layer with a 2x2 pool size
+* Dense layer with 128 neurons each and ReLU activation
 * Output Dense layer with 10 neurons and softmax activation
 
 ## Results
 
-After training for 30 epochs with a batch size of 128, the model achieves high accuracy on the test dataset. The loss and accuracy are printed at the end of the training process.
-
-## License
-This project is licensed under the MIT License.
+After training for 17 epochs with a batch size of 128, the model achieves high accuracy on the test dataset. The loss and accuracy are printed at the end of the training process.
